@@ -15,23 +15,26 @@
             <p id="question">What is your varsity</p>
         </div>
         <div class="row">
-            <div class="col-sm-6" id="1" onclick=lock(this.id)>
+            <div class="col-sm-6" id="1" onclick=choice(this.id)>
                 <p>sds</p>
             </div>
-            <div class="col-sm-6" id="2" onclick=lock(this.id)>
+            <div class="col-sm-6" id="2" onclick=choice(this.id)>
                 <p>Aasad</p>
             </div>
-            <div class="col-sm-6" id="3" onclick=lock(this.id)>
+            <div class="col-sm-6" id="3" onclick=choice(this.id)>
                 <p>sdg</p>
             </div>
-            <div class="col-sm-6" id="4" onclick=lock(this.id)>
+            <div class="col-sm-6" id="4" onclick=choice(this.id)>
                 <p>Afgdfgd</p>
             </div>
             <div class="row pageMovement">
-                <div class="col-lg-5 btn btn-primary" onclick=showResult()>
+                <div class="col-lg-3 btn btn-primary" onclick=showResult()>
                     Check 
                 </div>
-                <div class="col-lg-5 offset-lg-2 btn btn-primary" onclick=next()>
+                <div class="col-lg-3 offset-lg-1 btn btn-primary" onclick=lock()>
+                    Lock 
+                </div>
+                <div class="col-lg-4 offset-lg-1 btn btn-primary" onclick=next()>
                     Next
                 </div>
             </div>
