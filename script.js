@@ -23,38 +23,79 @@ window.onload=function(){
 
 let questions=[
     {
-        question:"What is your name?",
-        optionA:"Samir",
-        optionB:"Amir",
-        optionC:"Tamir",
-        optionD:"Zamir",
+        question:"var x = Math.PI; here x=?",
+        optionA:"3.141592653589793",
+        optionB:"3.14",
+        optionC:"3.1416",
+        optionD:"3.14159",
         answer:1
     },
     {
-        question:"What is your age?",
-        optionA:"1",
-        optionB:"2",
-        optionC:"3",
-        optionD:"4",
+        question:'What does 3+4+"7" evaluate to?',
+        optionA:"Null",
+        optionB:"77",
+        optionC:"NaN",
+        optionD:"347",
         answer:2
     },
     {
-        question:"What is your gender?",
-        optionA:"1",
-        optionB:"2",
-        optionC:"3",
-        optionD:"4",
+        question:" What is the similarity between var myString = new String('male') and var myStringLiteral = 'male'",
+        optionA:"Both are object",
+        optionB:"Both are primitive String",
+        optionC:"Both can call String constructor function",
+        optionD:"None of the above",
+        answer:3
+    },
+    {
+        question:"var object1 = { same: 'same' }; var object2 = { same: 'same' }; console.log(object1 === object2); here output is?",
+        optionA:"undefined",
+        optionB:"NaN",
+        optionC:"true",
+        optionD:"false",
         answer:4
     },
     {
-        question:"What is your casa?",
-        optionA:"1",
-        optionB:"2",
-        optionC:"3",
-        optionD:"4",
+        question:"Which one is true about this keyword?",
+        optionA:"It is a context pointer",
+        optionB:"It is a object pointer",
+        optionC:"It is related with queue",
+        optionD:"All the above",
+        answer:1
+    },
+    {
+        question:'In order to convert 4F (of base 16) to integer, the code used will be',
+        optionA:"parseInt (4F, 16)",
+        optionB:'parseInt ("4F", 16)',
+        optionC:'parseInt (16,"4F")',
+        optionD:"parseInt (16,4F)",
+        answer:2
+    },
+    {
+        question:"Which one is not used in JavaScript?",
+        optionA:"Alert",
+        optionB:"Confirm",
+        optionC:"Prompt",
+        optionD:"None of the above",
+        answer:4
+    },
+    {
+        question:"How we declare 3 dimension array in JavaScript?",
+        optionA:"myArr=[{},{},{}]",
+        optionB:"myArr=[][][]",
+        optionC:"myArr=[[[]]]",
+        optionD:"All are correct",
+        answer:3
+    },
+    {
+        question:"How will you get the Checkbox status whether it is checked or not?",
+        optionA:"var status = document.getElementById('checkbox1').isChecked();",
+        optionB:"var status = document.getElementById('checkbox1').isChecked;",
+        optionC:"var status = document.getElementById('checkbox1').checked;",
+        optionD:"var status = document.getElementById('checkbox1').checked();",
         answer:3
     }
 ]
+
 
 
 let questionNo=document.getElementById("questionNo");
@@ -86,6 +127,16 @@ let check=(e)=>{
     }else if(num==4 && e==questions[2].answer){
         answer=true;
     }else if(num==5 && e==questions[3].answer){
+        answer=true;
+    }else if(num==6 && e==questions[4].answer){
+        answer=true;
+    }else if(num==7 && e==questions[5].answer){
+        answer=true;
+    }else if(num==8 && e==questions[6].answer){
+        answer=true;
+    }else if(num==9 && e==questions[7].answer){
+        answer=true;
+    }else if(num==10 && e==questions[8].answer){
         answer=true;
     }else{
         answer=false;
@@ -129,6 +180,26 @@ let showResult=()=>{
                 document.getElementById(questions[3].answer).classList.remove('btn-danger');
                 document.getElementById(questions[3].answer).classList.add('btn-success');
             break;
+            case 6:
+                document.getElementById(questions[4].answer).classList.remove('btn-danger');
+                document.getElementById(questions[4].answer).classList.add('btn-success');
+            break;
+            case 7:
+                document.getElementById(questions[5].answer).classList.remove('btn-danger');
+                document.getElementById(questions[5].answer).classList.add('btn-success');
+            break;
+            case 8:
+                document.getElementById(questions[6].answer).classList.remove('btn-danger');
+                document.getElementById(questions[6].answer).classList.add('btn-success');
+            break;
+            case 9:
+                document.getElementById(questions[7].answer).classList.remove('btn-danger');
+                document.getElementById(questions[7].answer).classList.add('btn-success');
+            break;
+            case 10:
+                document.getElementById(questions[8].answer).classList.remove('btn-danger');
+                document.getElementById(questions[8].answer).classList.add('btn-success');
+            break;
             default:
                 console.log("wrong")
         }
@@ -153,7 +224,7 @@ let next=()=>{
         document.getElementById(i).classList.remove('btn-success');
         document.getElementById(i).classList.remove('btn-secondary');
     }
-    if(checked && num<=4){
+    if(checked && num<=9){
         num++;
         questionNo.innerHTML=num;
         question.innerHTML=questions[index].question;
@@ -164,7 +235,7 @@ let next=()=>{
         optionD.innerHTML=questions[index].optionD;
         index++;
         nextSound.play();
-    }else if(num==5){
+    }else if(num==10){
         alert(score);
     }
     checked=false;
